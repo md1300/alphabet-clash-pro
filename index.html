@@ -11,16 +11,17 @@
 </head>
 <body>
   <main class=" bg-black min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
-    <section class="home min-h-screen flex   items-center justify-center   text-white hidden ">
+    <!-- first page -->
+    <section id="home" class=" min-h-screen flex   items-center justify-center   text-white  ">
         <div class="flex flex-col items-center gap-10 ">
          <h1 class="text-6xl uppercase ">alpha clash pro</h1>
          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-         <button class="btn bg-white text-black">play now</button>
+         <button onClick="play()" class="btn bg-white text-black">play now</button>
      
         </div>
         </section>
         <!-- playground field -->
-        <section class="play-ground hidden">
+        <section id="play-ground" class=" hidden">
              <div class="flex flex-col items-center gap-20">
                 <!-- screen -->
                 <div >
@@ -97,6 +98,8 @@
             <p>practics makes you pro</p>
         </div>
         </section>
-  </main> 
+  </main>
+  <script src="scritp/utility.js"></script>
+  <script src="scritp/alpha-clash.js"></script> 
 </body>
 </html>
