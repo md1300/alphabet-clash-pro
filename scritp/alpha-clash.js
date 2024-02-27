@@ -10,8 +10,17 @@
 //     openElement.classList.remove('hidden');
 // }
 function continueGame(){
+    // generate a random alphabet
  const alphabet=grtARandomAlphabet()
  console.log('the random value',alphabet)
+
+// set randomly generated alphabet to the screen ( show it)
+ const currentAlphabet=document.getElementById('current-alphabet');
+ currentAlphabet.innerText=alphabet
+
+//  set background color in keyboard
+ setBackgroundColorById(alphabet)
+
 }
 
 
