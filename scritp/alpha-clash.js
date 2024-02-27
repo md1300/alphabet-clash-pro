@@ -26,34 +26,51 @@ function handleKeyboardButtonPress(event){
     // check matched or not
     if(playerPressed===expectedAlphabet){
         console.log('you get a one point');
-        //---------- update score-------------
-        // 1 : ---get the current score----------
-        const currentScoreElement=document.getElementById('current-score');
-        const currentScoreText= currentScoreElement.innerText;
-        const currentScore = parseInt(currentScoreText)
+
+        const currentScore = getTextElementValueById('current-score');
         console.log(currentScore)
-        // 2 : ----incrase the score by 1--------
-        const newScore=currentScore+ 1;
-        // 3 :-------show the update score----------
-        currentScoreElement.innerText=newScore;
+        const updateScore=currentScore + 1;
+          setTextElementValueById('current-score',updateScore)
+        
+
+        // -------------------------------------
+        // //---------- update score-------------
+        // // 1 : ---get the current score----------
+        // const currentScoreElement=document.getElementById('current-score');
+        // const currentScoreText= currentScoreElement.innerText;
+        // const currentScore = parseInt(currentScoreText)
+        // console.log(currentScore)
+        // // 2 : ----incrase the score by 1--------
+        // const newScore=currentScore+ 1;
+        // // 3 :-------show the update score----------
+        // currentScoreElement.innerText=newScore;
 
         removeBackgroundColorById(expectedAlphabet)
         continueGame();
     }
     else{
-        console.log('you loss your live')
+        console.log('you loss your life')
+
+
+        const currentLife=getTextElementValueById('current-life')
+        const updateLife=currentLife - 1;
+        setTextElementValueById('current-life',updateLife)
+
+
+// ---------------------------------
+
     //    ---update life-------
     // -----get the current life-------
-    const currentLifeElement = document.getElementById('current-life')
-    const currentLifeText=currentLifeElement.innerText;
-    const currentLife=parseInt(currentLifeText) ;
-// ---decrease the current life-------
-   const newLife = currentLife - 1 ;
-//    ----------show the update life----------
-   currentLifeElement.innerText=newLife;
-    }
- 
-    
+//     const currentLifeElement = document.getElementById('current-life')
+//     const currentLifeText=currentLifeElement.innerText;
+//     const currentLife=parseInt(currentLifeText) ;
+// // ---decrease the current life-------
+//    const newLife = currentLife - 1 ;
+// //    ----------show the update life----------
+//    currentLifeElement.innerText=newLife;
+
+
+    }  
 }
 // capture keyboard key press   
 document.addEventListener('keyup',handleKeyboardButtonPress )
