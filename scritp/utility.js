@@ -9,16 +9,21 @@ function showElementById(elementId){
     element.classList.remove('hidden')
 }
 
-
+// ----add background color-------
 
 function setBackgroundColorById(elementId){
   const element =document.getElementById(elementId)
   element.classList.add('bg-orange-400')
 }
+// -----remove background color 
+
+function removeBackgroundColorById(elementId){
+    const element=document.getElementById(elementId)
+    element.classList.remove('bg-orange-400')
+}
 
 
-
-function grtARandomAlphabet(){
+function getARandomAlphabet(){
     const alphabetString='abcdefghijklmnopqrstuvwxyz';
     const alphabets=alphabetString.split('')
     // console.log(alphabets)
